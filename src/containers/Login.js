@@ -24,7 +24,7 @@ const Login = () => {
         const password = data.get('password');
 
         try {
-            await signInWithEmailAndPassword(auth);
+            await signInWithEmailAndPassword(auth,email,password);
             navigate("/");
         } catch (error) {
             setError(error.message)
